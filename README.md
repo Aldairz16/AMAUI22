@@ -1,10 +1,34 @@
-# AMAUI — Sitio del equipo y portafolio
+# AMAUI
 
-Página de presentación del equipo de desarrollo **AMAUI** y portafolio de
-proyectos. Construida con **Next.js (App Router) + TypeScript + Tailwind CSS**,
-lista para desplegar en **Vercel**.
+Sitio de presentación del equipo de desarrollo **AMAUI** y portafolio de
+proyectos. Construido con **Next.js (App Router) + TypeScript + Tailwind
+CSS v4**, desplegado en **Vercel**.
 
-## Desarrollo local
+- **Repositorio:** [github.com/Aldairz16/AMAUI22](https://github.com/Aldairz16/AMAUI22)
+- **Producción:** desplegado en Vercel con auto-deploy en cada push a `main`
+  (agrega aquí la URL pública, ej. `https://amaui22.vercel.app`)
+
+## Equipo
+
+| Integrante | Rol | LinkedIn |
+| --- | --- | --- |
+| Aldair Alexander Pacherrez Nuñez | Líder de Producto, Gestión e IA | [in/aldairpacherrez](https://www.linkedin.com/in/aldairpacherrez) |
+| Jean Carlos Anderson Espinoza Sangay | Diseño UX/UI, Creatividad y Frontend | [in/anderson-espinoza](https://www.linkedin.com/in/anderson-espinoza/) |
+| Jose Hurtado Rivas | Backend, Arquitectura Técnica y Escalabilidad | [in/jose-hurtado-rivas](https://www.linkedin.com/in/jose-hurtado-rivas-8150b0231/) |
+
+## Stack técnico
+
+- [Next.js 15](https://nextjs.org/) (App Router, React Server Components)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/) (vía `@tailwindcss/postcss`)
+- Contenido 100% basado en datos tipados (`data/`) — sin CMS ni base de datos
+
+## Requisitos
+
+- Node.js 18.18 o superior (recomendado 20+)
+- npm
+
+## Empezar en local
 
 ```bash
 npm install
@@ -13,62 +37,109 @@ npm run dev
 
 Abre <http://localhost:3000>.
 
-Para verificar el build de producción:
+Otros comandos útiles:
 
 ```bash
-npm run build
+npm run build   # build de producción (lo mismo que corre Vercel)
+npm run start   # sirve el build de producción localmente
+npm run lint    # linting
+```
+
+## Estructura del proyecto
+
+```
+amaui/
+├── app/
+│   ├── layout.tsx              # Layout raíz: fuente, metadata SEO, Navbar + Footer
+│   ├── page.tsx                # Home: ensambla todas las secciones
+│   ├── globals.css             # Tailwind + tema de color (ver "Tema" abajo)
+│   ├── icon.jpg                # Favicon
+│   └── proyectos/[slug]/
+│       └── page.tsx            # Página de detalle de cada proyecto
+├── components/                 # Componentes de UI (no llevan contenido "quemado")
+│   ├── Navbar.tsx, Footer.tsx, Eyebrow.tsx
+│   ├── Hero.tsx, Services.tsx, Synergy.tsx, Contact.tsx
+│   └── TeamGrid.tsx / MemberCard.tsx, ProjectsGrid.tsx / ProjectCard.tsx
+├── data/                       # Todo el contenido editable del sitio
+│   ├── team.ts                 # Integrantes
+│   ├── projects.ts             # Proyectos del portafolio
+│   ├── services.ts             # Servicios ("Qué hacemos")
+│   └── synergy.ts              # Sección "Cómo trabajamos"
+└── public/
+    ├── logo.jpeg                # Logo del equipo (navbar)
+    └── team/                    # Fotos de perfil de cada integrante
 ```
 
 ## ✏️ Cómo editar el contenido
 
-Todo el contenido vive en la carpeta `data/` — **no necesitas tocar los
-componentes**:
+Todo el contenido vive en `data/` — **no hace falta tocar los componentes**
+para actualizar texto, agregar un proyecto o cambiar una foto.
 
-| Archivo             | Qué controla                                           |
-| ------------------- | ------------------------------------------------------ |
-| `data/team.ts`      | Integrantes: nombre, rol, bio, skills, foto y redes.   |
-| `data/projects.ts`  | Proyectos del portafolio (cards + página de detalle).  |
-| `data/services.ts`  | Servicios de la sección "Qué hacemos".                 |
+| Archivo | Qué controla |
+| --- | --- |
+| `data/team.ts` | Integrantes: nombre, rol, bio, "aporta al equipo", foto y redes. |
+| `data/projects.ts` | Proyectos del portafolio (cards del home + página de detalle). |
+| `data/services.ts` | Tarjetas de la sección "Qué hacemos". |
+| `data/synergy.ts` | Tabla y textos de la sección "Cómo trabajamos". |
 
-### Fotos del equipo
+### Agregar o editar un proyecto
 
-Ya están cargadas en `public/team/` (`aldair.jpeg`, `anderson.jpeg`, `jose.jpeg`)
-y referenciadas en `data/team.ts`. Para reemplazar alguna, guarda la nueva
-imagen con el mismo nombre en `public/team/` (o cambia la ruta en `foto` en
-`data/team.ts`). Si pones `foto: null` se muestra un avatar con las iniciales.
+En `data/projects.ts`, cada objeto acepta:
 
-### Logo del equipo (el oso 🐻)
+- `slug` — identificador para la URL (`/proyectos/mi-slug`), sin espacios ni tildes.
+- `titulo`, `resumen` (se ve en la card) y `descripcion` (página de detalle).
+- `tecnologias` — arreglo de strings.
+- `imagen` — ruta en `public/` (ej. `/proyectos/foo.png`) o `null` para mostrar
+  un degradado con la inicial del proyecto.
+- `deployUrl` — link al proyecto **ya desplegado**. Si no está definido, el
+  botón "Ver proyecto desplegado" simplemente no se muestra.
+- `repoUrl` — link al repositorio (opcional).
 
-El logo real ya está cargado en `public/logo.jpeg` (usado en el navbar) y
-`app/icon.jpg` (favicon de la pestaña del navegador). Para reemplazarlo,
-sobrescribe esos archivos con el mismo nombre, o cambia la ruta en
-`components/Navbar.tsx`.
+Actualmente hay 5 proyectos cargados como slots pendientes de detalle:
+**Laboral BCP, AMAY, Perfila UTP, Come Bien y Rukiur**.
 
-### Proyectos
+### Fotos del equipo y logo
 
-Cada proyecto en `data/projects.ts` tiene:
+Las fotos viven en `public/team/*.jpeg` y se referencian desde `data/team.ts`
+(campo `foto`). Si dejas `foto: null` se muestra un avatar con las iniciales
+en su lugar. El logo del navbar/favicon está en `public/logo.jpeg` y
+`app/icon.jpg`; para reemplazarlo, sobrescribe esos archivos o cambia la
+ruta en `components/Navbar.tsx`.
 
-- `slug` — identificador para la URL (`/proyectos/mi-slug`).
-- `titulo`, `resumen` (card) y `descripcion` (página de detalle).
-- `tecnologias` — lista de tecnologías.
-- `imagen` — captura en `public/` (ej. `/proyecto1.png`) o `null`.
-- `deployUrl` — enlace al proyecto **desplegado** (botón "Ver proyecto").
-- `repoUrl` — enlace al repositorio (opcional).
+## 🎨 Tema y diseño
 
-## 🎨 Cambiar el color de acento
+Los colores del sitio son variables CSS definidas en `app/globals.css` dentro
+de un bloque `@theme`:
 
-Edita `--color-accent` en `app/globals.css` para reestilizar todo el sitio.
+```css
+--color-bg, --color-surface, --color-ink, --color-muted,
+--color-border, --color-accent, --color-accent-hover
+```
 
-## 🚀 Desplegar en Vercel
+Cambia `--color-accent` para reestilizar todos los botones y acentos del
+sitio de una sola vez.
+
+> ⚠️ **Nota sobre Tailwind v4:** para referenciar estas variables en una
+> clase usa **paréntesis**, no corchetes: `bg-(--color-accent)`,
+> `text-(--color-ink)`. La sintaxis con corchetes (`bg-[--color-accent]`)
+> no genera una regla CSS válida en Tailwind v4 y el elemento queda
+> invisible (fondo transparente) — ese fue justamente un bug que se corrigió
+> en este proyecto.
+
+## 🚀 Despliegue en Vercel
+
+El repositorio ya está conectado a Vercel: cada push a `main` dispara un
+nuevo deploy automáticamente. Para configurarlo desde cero en otro entorno:
 
 1. Sube el proyecto a GitHub.
 2. En [vercel.com](https://vercel.com) → **Add New Project** → importa el repo.
-3. Vercel detecta Next.js automáticamente. Deja la configuración por defecto y
-   pulsa **Deploy**.
+3. Vercel detecta Next.js automáticamente. Deja la configuración por defecto
+   (`npm run build`, sin variables de entorno requeridas) y pulsa **Deploy**.
 
 O desde la terminal:
 
 ```bash
 npm i -g vercel
-vercel
+vercel        # despliegue de preview
+vercel --prod # despliegue a producción
 ```
