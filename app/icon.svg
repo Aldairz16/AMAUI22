@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="AMAUI">
+  <circle cx="50" cy="50" r="48" fill="#8a5a3b" />
+  <circle cx="30" cy="26" r="12" fill="#8a5a3b" stroke="#4a2f1e" stroke-width="3" />
+  <circle cx="70" cy="26" r="12" fill="#8a5a3b" stroke="#4a2f1e" stroke-width="3" />
+  <circle cx="50" cy="52" r="34" fill="#a9744f" stroke="#4a2f1e" stroke-width="3" />
+  <circle cx="39" cy="46" r="8" fill="#fff" stroke="#4a2f1e" stroke-width="2.5" />
+  <circle cx="61" cy="46" r="8" fill="#fff" stroke="#4a2f1e" stroke-width="2.5" />
+  <circle cx="39" cy="46" r="3" fill="#2b1810" />
+  <circle cx="61" cy="46" r="3" fill="#2b1810" />
+  <ellipse cx="50" cy="62" rx="6" ry="4.5" fill="#2b1810" />
+  <rect x="26" y="74" width="48" height="9" rx="2" fill="#c0392b" />
+</svg>
