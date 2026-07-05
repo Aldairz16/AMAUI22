@@ -8,6 +8,10 @@
 //  - deployUrl: enlace al proyecto YA desplegado (botón "Ver proyecto").
 //  - imagen: sube una captura a  public/  y pon la ruta, ej "/proyecto1.png".
 //            Si dejas imagen: null se muestra un degradado con la inicial.
+//
+//  Los 5 proyectos de abajo están pendientes de detalle (resumen,
+//  descripción, tecnologías, link de deploy). Se irán completando a medida
+//  que lleguen los datos de cada uno.
 // ============================================================================
 
 export type Project = {
@@ -23,38 +27,44 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "proyecto-ejemplo-uno",
-    titulo: "Plataforma Web (Ejemplo)",
-    resumen:
-      "Aplicación web para gestión de datos con panel administrativo. Reemplaza con un proyecto real.",
-    descripcion:
-      "Descripción completa del proyecto. Explica el problema que resuelve, tu rol en el equipo, las decisiones técnicas más importantes y los resultados obtenidos. Este texto aparece en la página de detalle del proyecto.",
-    tecnologias: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+    slug: "laboral-bcp",
+    titulo: "Laboral BCP",
+    resumen: "Detalles del proyecto próximamente.",
+    descripcion: "Descripción pendiente.",
+    tecnologias: [],
     imagen: null,
-    deployUrl: "https://vercel.com",
-    repoUrl: "https://github.com",
   },
   {
-    slug: "proyecto-ejemplo-dos",
-    titulo: "App Móvil (Ejemplo)",
-    resumen:
-      "Aplicación multiplataforma con sincronización en la nube. Reemplaza con un proyecto real.",
-    descripcion:
-      "Descripción completa del proyecto. Explica el problema que resuelve, tu rol en el equipo, las decisiones técnicas más importantes y los resultados obtenidos.",
-    tecnologias: ["React Native", "Expo", "Firebase"],
+    slug: "amay",
+    titulo: "AMAY",
+    resumen: "Detalles del proyecto próximamente.",
+    descripcion: "Descripción pendiente.",
+    tecnologias: [],
     imagen: null,
-    deployUrl: "https://vercel.com",
   },
   {
-    slug: "proyecto-ejemplo-tres",
-    titulo: "Landing / E-commerce (Ejemplo)",
-    resumen:
-      "Sitio de alto rendimiento orientado a conversión. Reemplaza con un proyecto real.",
-    descripcion:
-      "Descripción completa del proyecto. Explica el problema que resuelve, tu rol en el equipo, las decisiones técnicas más importantes y los resultados obtenidos.",
-    tecnologias: ["Astro", "Tailwind CSS", "Stripe"],
+    slug: "perfila-utp",
+    titulo: "Perfila UTP",
+    resumen: "Detalles del proyecto próximamente.",
+    descripcion: "Descripción pendiente.",
+    tecnologias: [],
     imagen: null,
-    deployUrl: "https://vercel.com",
+  },
+  {
+    slug: "come-bien",
+    titulo: "Come Bien",
+    resumen: "Detalles del proyecto próximamente.",
+    descripcion: "Descripción pendiente.",
+    tecnologias: [],
+    imagen: null,
+  },
+  {
+    slug: "rukiur",
+    titulo: "Rukiur",
+    resumen: "Detalles del proyecto próximamente.",
+    descripcion: "Descripción pendiente.",
+    tecnologias: [],
+    imagen: null,
   },
 ];
 
