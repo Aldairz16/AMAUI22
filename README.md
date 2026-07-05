@@ -102,11 +102,16 @@ En `data/projects.ts`, cada objeto acepta:
 Actualmente hay 5 proyectos cargados: **Laboral BCP, AMAY, Perfila UTP, Come
 Bien y Rukiur** (los últimos 4 son slots pendientes de detalle).
 
-### Demos embebidas (como AMAY)
+### Demos embebidas (alternativa a un deploy externo)
 
-Cuando un proyecto es una SPA propia (Vite/CRA) sin despliegue externo, se
-puede alojar directamente dentro de este sitio en vez de depender de otro
-hosting:
+AMAY, por ejemplo, tiene su propio repo ([AMAY-Portafolio](https://github.com/Aldairz16/AMAY-Portafolio))
+desplegado por separado en Vercel — cada push a ese repo se auto-despliega
+solo, sin tocar este proyecto. Es el enfoque recomendado: cero mantenimiento
+cruzado entre repos.
+
+Si en el futuro un proyecto no tiene dónde desplegarse aparte, también se
+puede alojar su build directamente dentro de este sitio (se probó con AMAY
+antes de mudarlo a su propio deploy):
 
 1. En el proyecto original, agrega un script de build con el base path donde
    vivirá (ej. `vite build --base=/proyectos/<slug>/demo/`).
@@ -117,8 +122,12 @@ hosting:
 4. Agrega en `next.config.mjs` → `rewrites()` dos reglas para esa ruta: una
    para el path exacto y otra `:path*` — ambas apuntando a su `index.html`
    (fallback de SPA para que las rutas internas del router también funcionen
-   al recargar). Ver el ejemplo de AMAY ya en el archivo.
+   al recargar).
 5. Pon `deployUrl: "/proyectos/<slug>/demo"` en `data/projects.ts`.
+
+   ⚠️ Esto acopla el build de AMAUI al del otro proyecto (hay que repetir
+   estos pasos manualmente cada vez que el proyecto cambie), así que solo
+   úsalo si de verdad no hay forma de desplegarlo aparte.
 
 ### Fotos del equipo y logo
 

@@ -45,7 +45,9 @@ export const projects: Project[] = [
     tecnologias: ["React", "Vite", "TypeScript", "Tailwind CSS", "Radix UI", "Web Speech API"],
     imagen: "/projects/amay-icon.png",
     color: "#2B59FF",
-    deployUrl: "/proyectos/amay/demo",
+    repoUrl: "https://github.com/Aldairz16/AMAY-Portafolio",
+    // deployUrl: agrega aquí la URL de Vercel una vez desplegado el repo
+    // AMAY-Portafolio (ej. "https://amay-portafolio.vercel.app").
   },
   {
     slug: "perfila-utp",
