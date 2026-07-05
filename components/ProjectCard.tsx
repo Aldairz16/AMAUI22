@@ -3,6 +3,8 @@ import Image from "next/image";
 import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const accent = project.color;
+
   return (
     <Link
       href={`/proyectos/${project.slug}`}
@@ -17,7 +19,10 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-5xl font-black text-(--color-accent) transition-transform duration-500 group-hover:scale-105">
+          <div
+            className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-5xl font-black text-(--color-accent) transition-transform duration-500 group-hover:scale-105"
+            style={accent ? { background: `linear-gradient(135deg, ${accent}, #0b0b0b)` } : undefined}
+          >
             {"</"}
             {project.titulo.charAt(0)}
             {">"}
@@ -38,13 +43,17 @@ export default function ProjectCard({ project }: { project: Project }) {
             <span
               key={t}
               className="rounded-full border border-(--color-border) bg-(--color-surface) px-2.5 py-1 font-mono text-xs font-medium text-(--color-muted)"
+              style={accent ? { borderColor: `${accent}55`, color: accent } : undefined}
             >
               {t}
             </span>
           ))}
         </div>
 
-        <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-(--color-accent-hover)">
+        <span
+          className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-(--color-accent-hover)"
+          style={accent ? { color: accent } : undefined}
+        >
           Ver proyecto
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </span>

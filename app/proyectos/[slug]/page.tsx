@@ -32,6 +32,7 @@ export default async function ProjectPage({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) notFound();
+  const accent = project.color;
 
   return (
     <article className="mx-auto max-w-4xl px-6 py-16">
@@ -56,6 +57,7 @@ export default async function ProjectPage({
             <span
               key={t}
               className="rounded-full border border-(--color-border) bg-(--color-surface) px-3 py-1 font-mono text-xs font-medium text-(--color-muted)"
+              style={accent ? { borderColor: `${accent}55`, color: accent } : undefined}
             >
               {t}
             </span>
@@ -98,7 +100,10 @@ export default async function ProjectPage({
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-7xl font-black text-(--color-accent)">
+          <div
+            className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-7xl font-black text-(--color-accent)"
+            style={accent ? { background: `linear-gradient(135deg, ${accent}, #0b0b0b)` } : undefined}
+          >
             {"</"}
             {project.titulo.charAt(0)}
             {">"}
