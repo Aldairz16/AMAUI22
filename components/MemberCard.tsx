@@ -58,20 +58,25 @@ export default function MemberCard({ member }: { member: Member }) {
         {member.nombre}
       </h3>
       <p className="text-sm font-medium text-[--color-accent]">{member.rol}</p>
-      <p className="mt-3 text-sm leading-relaxed text-[--color-muted]">
+      <p className="mt-3 whitespace-pre-line text-left text-sm leading-relaxed text-[--color-muted]">
         {member.bio}
       </p>
 
-      {member.skills.length > 0 && (
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {member.skills.map((s) => (
-            <span
-              key={s}
-              className="rounded-full bg-[--color-surface] px-3 py-1 text-xs font-medium text-[--color-muted]"
-            >
-              {s}
-            </span>
-          ))}
+      {member.aporta.length > 0 && (
+        <div className="mt-4 text-left">
+          <p className="text-xs font-semibold uppercase tracking-wide text-[--color-ink]">
+            Aporta al equipo
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {member.aporta.map((s) => (
+              <span
+                key={s}
+                className="rounded-full bg-[--color-surface] px-3 py-1 text-xs font-medium text-[--color-muted]"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
         </div>
       )}
 

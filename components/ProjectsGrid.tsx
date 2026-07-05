@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectsGrid() {
   return (
-    <section id="proyectos" className="bg-[--color-surface] py-24">
+    <section id="proyectos" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-[--color-ink] sm:text-4xl">

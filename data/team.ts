@@ -19,7 +19,7 @@ export type Member = {
   nombre: string;
   rol: string;
   bio: string;
-  skills: string[];
+  aporta: string[];
   foto: string | null;
   socials: Social;
 };
@@ -28,10 +28,10 @@ export const team: Member[] = [
   {
     id: "aldair",
     nombre: "Aldair Alexander Pacherrez Nuñez",
-    rol: "Project / Product Manager Jr. | UX/UI, Scrum, SQL y Automatización",
+    rol: "Líder de Producto, Gestión e IA",
     bio:
-      "Estudiante de Ingeniería de Sistemas e Informática en Chimbote, Áncash, Perú, con perfil orientado a gestión de proyectos y producto. Forma parte del equipo AMAUI (Innovation Team) y del Aspire Institute (Aspire Leaders Program), participando activamente en hackathons de innovación social e IA.",
-    skills: ["Project Management", "Product Management", "UX/UI", "Scrum", "SQL", "Automatización"],
+      "Aldair lidera la visión del equipo y se encarga de convertir ideas dispersas en proyectos claros, organizados y accionables. Su rol conecta la gestión del proyecto, la definición del problema, la documentación, la coordinación de reuniones y el uso estratégico de inteligencia artificial para acelerar el trabajo del equipo.\n\nDentro del equipo, asegura que cada solución mantenga foco en el usuario, responda a una problemática real y avance con orden hacia entregables concretos. Su aporte permite que el equipo trabaje con dirección, prioridades claras y una metodología que evita perder contexto durante hackathons, incubadoras y proyectos propios.",
+    aporta: ["Dirección", "Organización", "Estrategia de producto", "IA", "Automatización", "Documentación", "Gestión ágil"],
     foto: "/team/aldair.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/aldairpacherrez",
@@ -40,10 +40,10 @@ export const team: Member[] = [
   {
     id: "anderson",
     nombre: "Jean Carlos Anderson Espinoza Sangay",
-    rol: "Frontend Developer (Angular, React) | UI/UX Figma | Analista Jr - Desarrollo Logic",
+    rol: "Diseño UX/UI, Creatividad y Frontend",
     bio:
-      "Estudiante de Ingeniería de Sistemas e Informática en Perú, actualmente en INCAD SERVICE y estudiando en la UTP. Se enfoca en desarrollo frontend y diseño de prototipos web, optimizando procesos con soluciones innovadoras.",
-    skills: ["Angular", "React", "Figma / UI-UX", "PostgreSQL", "Spring", "Frontend Development"],
+      "Anderson transforma las ideas del equipo en experiencias visuales claras, funcionales y atractivas. Su rol se enfoca en la ideación, el diseño de interfaces, la experiencia de usuario y la construcción frontend de prototipos digitales.\n\nDentro del equipo, aporta creatividad, criterio visual y capacidad para aterrizar conceptos en pantallas, flujos y componentes que los usuarios puedan entender fácilmente. Su trabajo conecta la propuesta de valor con una experiencia digital usable, haciendo que las soluciones no solo funcionen, sino que también se vean profesionales y sean fáciles de presentar.",
+    aporta: ["Ideación", "UX/UI", "Prototipado", "Diseño visual", "Frontend", "Figma", "Angular", "React"],
     foto: "/team/anderson.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/anderson-espinoza/",
@@ -52,10 +52,10 @@ export const team: Member[] = [
   {
     id: "jose",
     nombre: "Jose Hurtado Rivas",
-    rol: "Backend Developer | Spring Boot & Spring WebFlux | Microservices",
+    rol: "Backend, Arquitectura Técnica y Escalabilidad",
     bio:
-      "Backend Developer en Perú, actualmente en SDC DATA LATAM y estudiante en la UTP. Especializado en microservicios, cloud y arquitectura backend, y activo en la comunidad tech (Cloud Native, GitHub Campus Expert, hackathons de IA).",
-    skills: ["Spring Boot / WebFlux", "AWS", "Docker", "Angular", "Microservices", "GitOps"],
+      "José fortalece la base técnica del equipo, encargándose de que las soluciones tengan una arquitectura sólida, escalable y preparada para convertirse en productos reales. Su rol se enfoca en backend, microservicios, integración de sistemas, cloud y buenas prácticas de desarrollo.\n\nDentro del equipo, aporta experiencia técnica para evaluar la viabilidad de cada propuesta, construir servicios robustos y explicar soluciones complejas de forma clara. Su perfil permite que los proyectos no se queden solo en prototipos visuales, sino que tengan una estructura tecnológica capaz de sostener una implementación real.",
+    aporta: ["Backend", "Arquitectura", "Microservicios", "APIs", "Cloud", "Docker", "Spring Boot", "AWS", "Exposición técnica"],
     foto: "/team/jose.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/jose-hurtado-rivas-8150b0231/",
