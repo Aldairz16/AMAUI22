@@ -48,7 +48,7 @@ export default function MemberCard({ member }: { member: Member }) {
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-(--color-accent) text-2xl font-bold text-white">
+          <div className="flex h-full w-full items-center justify-center bg-(--color-accent) text-2xl font-bold text-(--color-on-accent)">
             {initials(member.nombre)}
           </div>
         )}

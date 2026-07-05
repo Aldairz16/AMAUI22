@@ -82,13 +82,13 @@ export default function Hero() {
               equipo_de_desarrollo — disponible
             </span>
 
-            <h1 className="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-(--color-ink) sm:text-6xl">
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-(--color-ink) sm:text-5xl lg:text-6xl">
               Somos <span className="text-gradient">AMAUI</span>.
               <br />
               Convertimos ideas en software.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-(--color-muted)">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-(--color-muted) sm:text-lg">
               Un equipo de tres desarrolladores apasionados por crear
               aplicaciones web, móviles y APIs bien construidas, rápidas y
               fáciles de usar. Descubre lo que hacemos y nuestro portafolio de
@@ -98,7 +98,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/#proyectos"
-                className="group rounded-full bg-(--color-accent) px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_28px_-6px_var(--color-accent)]"
+                className="group rounded-full bg-(--color-accent) px-6 py-3 text-sm font-semibold text-(--color-on-accent) transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_28px_-6px_var(--color-accent)]"
               >
                 Ver proyectos{" "}
                 <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -115,8 +115,8 @@ export default function Hero() {
           </div>
 
           {/* Ventana de terminal animada */}
-          <div className="animate-fade-in-up hidden lg:block" style={{ animationDelay: "0.2s" }}>
-            <div className="animate-float overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-card) shadow-[0_30px_80px_-30px_rgba(139,92,246,0.35)]">
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <div className="animate-float overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-card) shadow-[0_30px_80px_-30px_rgba(198,139,78,0.35)]">
               <div className="flex items-center gap-2 border-b border-(--color-border) bg-(--color-surface) px-4 py-3">
                 <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
                 <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
@@ -125,7 +125,7 @@ export default function Hero() {
                   amaui — zsh
                 </span>
               </div>
-              <div className="space-y-2.5 p-5 font-mono text-[13px] leading-relaxed">
+              <div className="space-y-2.5 overflow-x-auto p-5 font-mono text-xs leading-relaxed sm:text-[13px]">
                 {termLines.map((line, i) => (
                   <p
                     key={i}
@@ -141,12 +141,12 @@ export default function Hero() {
         </div>
 
         <div
-          className="animate-fade-in-up mt-16 grid max-w-3xl grid-cols-3 gap-6 border-t border-(--color-border) pt-8"
+          className="animate-fade-in-up mt-12 grid max-w-3xl grid-cols-3 gap-4 border-t border-(--color-border) pt-8 sm:mt-16 sm:gap-6"
           style={{ animationDelay: "0.3s" }}
         >
           {stats.map((s) => (
             <div key={s.etiqueta}>
-              <p className="text-2xl font-extrabold text-(--color-ink) sm:text-3xl">
+              <p className="text-xl font-extrabold text-(--color-ink) sm:text-3xl">
                 {s.valor}
               </p>
               <p className="mt-1 text-xs text-(--color-muted) sm:text-sm">

@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function TeamGrid() {
   return (
-    <section id="equipo" className="py-24">
+    <section id="equipo" className="py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="max-w-2xl">

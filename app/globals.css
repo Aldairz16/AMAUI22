@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   Tema oscuro "developer" de AMAUI
-   Cambia el color de acento aquí (--color-accent) para reestilizar todo.
+   Tema oscuro "espresso" de AMAUI — paleta basada en el logo del oso:
+   chocolate oscuro, crema y caramelo. Cambia --color-accent para reestilizar.
    ========================================================================== */
 @theme {
-  --color-bg: #09090e;
-  --color-surface: #0e0e16;
-  --color-card: #12121b;
-  --color-ink: #f4f4f6;
-  --color-muted: #9d9db0;
-  --color-border: #23232f;
-  --color-accent: #8b5cf6;
-  --color-accent-hover: #a78bfa;
-  --color-accent-soft: rgba(139, 92, 246, 0.12);
+  --color-bg: #16100a;
+  --color-surface: #1d1510;
+  --color-card: #231a12;
+  --color-ink: #f3ead9;
+  --color-muted: #a6947c;
+  --color-border: #362a1d;
+  --color-accent: #c68b4e;
+  --color-accent-hover: #dba967;
+  --color-accent-soft: rgba(198, 139, 78, 0.14);
+  --color-on-accent: #1d130a;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
 }
@@ -31,7 +32,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-on-accent);
 }
 
 /* Ajuste para que las anclas no queden bajo el navbar sticky */
@@ -46,8 +47,8 @@ section[id] {
 /* Rejilla sutil estilo "blueprint" para el hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(139, 92, 246, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(198, 139, 78, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(198, 139, 78, 0.07) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 0%, black 40%, transparent 100%);
@@ -84,8 +85,8 @@ section[id] {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.5); }
-  50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(139, 92, 246, 0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(198, 139, 78, 0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(198, 139, 78, 0); }
 }
 
 @keyframes gradient-x {
@@ -111,7 +112,7 @@ section[id] {
 
 /* Texto con degradado animado (titulares) */
 .text-gradient {
-  background: linear-gradient(90deg, #a78bfa, #818cf8, #e879f9, #a78bfa);
+  background: linear-gradient(90deg, #dba967, #c68b4e, #f0d9ae, #dba967);
   background-size: 250% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -169,10 +170,10 @@ section[id] {
 
 .card-glow:hover {
   transform: translateY(-6px);
-  border-color: rgba(139, 92, 246, 0.45);
+  border-color: rgba(198, 139, 78, 0.5);
   box-shadow:
-    0 0 0 1px rgba(139, 92, 246, 0.15),
-    0 20px 45px -18px rgba(139, 92, 246, 0.35);
+    0 0 0 1px rgba(198, 139, 78, 0.15),
+    0 20px 45px -18px rgba(198, 139, 78, 0.35);
 }
 
 /* Enlace del navbar con subrayado animado */

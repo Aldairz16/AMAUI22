@@ -68,7 +68,7 @@ export default async function ProjectPage({
               href={project.deployUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-(--color-accent) px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_28px_-6px_var(--color-accent)]"
+              className="rounded-full bg-(--color-accent) px-6 py-3 text-sm font-semibold text-(--color-on-accent) transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_28px_-6px_var(--color-accent)]"
             >
               Ver proyecto desplegado ↗
             </a>
@@ -98,7 +98,7 @@ export default async function ProjectPage({
             className="object-cover"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#1c1730] via-(--color-card) to-[#241a3d] font-mono text-7xl font-black text-(--color-accent)">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-7xl font-black text-(--color-accent)">
             {"</"}
             {project.titulo.charAt(0)}
             {">"}

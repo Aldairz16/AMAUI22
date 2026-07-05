@@ -7,7 +7,7 @@ const EMAIL = "hurtadorivasj123@gmail.com";
 
 export default function Contact() {
   return (
-    <section id="contacto" className="relative overflow-hidden bg-(--color-surface) py-24">
+    <section id="contacto" className="relative overflow-hidden bg-(--color-surface) py-16 sm:py-24">
       {/* Glow decorativo detrás del CTA */}
       <div
         aria-hidden
@@ -27,7 +27,7 @@ export default function Contact() {
 
           <a
             href={`mailto:${EMAIL}`}
-            className="mt-8 inline-flex rounded-full bg-(--color-accent) px-8 py-3 font-mono text-sm font-semibold text-white transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_32px_-6px_var(--color-accent)]"
+            className="mt-8 inline-flex max-w-full break-all rounded-full bg-(--color-accent) px-6 py-3 font-mono text-xs font-semibold text-(--color-on-accent) transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_32px_-6px_var(--color-accent)] sm:px-8 sm:text-sm"
           >
             {EMAIL}
           </a>

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 export default function Synergy() {
   return (
-    <section className="bg-(--color-surface) py-24">
+    <section className="bg-(--color-surface) py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <Eyebrow>Sinergia</Eyebrow>

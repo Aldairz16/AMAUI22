@@ -17,7 +17,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#1c1730] via-(--color-card) to-[#241a3d] font-mono text-5xl font-black text-(--color-accent) transition-transform duration-500 group-hover:scale-105">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2c1f12] via-(--color-card) to-[#3a2917] font-mono text-5xl font-black text-(--color-accent) transition-transform duration-500 group-hover:scale-105">
             {"</"}
             {project.titulo.charAt(0)}
             {">"}

@@ -35,7 +35,7 @@ const icons: Record<ServiceIcon, React.ReactNode> = {
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-(--color-surface) py-24">
+    <section id="servicios" className="bg-(--color-surface) py-16 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
           <div className="max-w-2xl">
