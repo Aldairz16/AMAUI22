@@ -1,9 +1,14 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-(--color-border) bg-white">
+    <footer className="border-t border-(--color-border) bg-(--color-bg)">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
         <p className="text-sm font-semibold text-(--color-ink)">
           AM<span className="text-(--color-accent)">AUI</span>
+        </p>
+        <p className="font-mono text-xs text-(--color-muted)">
+          {"// hecho con "}
+          <span className="text-(--color-accent)">&lt;/&gt;</span>
+          {" por AMAUI"}
         </p>
         <p className="text-sm text-(--color-muted)">
           © {new Date().getFullYear()} AMAUI. Todos los derechos reservados.

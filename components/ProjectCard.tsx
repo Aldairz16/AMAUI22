@@ -6,7 +6,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/proyectos/${project.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-(--color-border) bg-white transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="card-glow group flex h-full flex-col overflow-hidden rounded-2xl border border-(--color-border) bg-(--color-card)"
     >
       <div className="relative aspect-[16/9] overflow-hidden bg-(--color-surface)">
         {project.imagen ? (
@@ -14,17 +14,19 @@ export default function ProjectCard({ project }: { project: Project }) {
             src={project.imagen}
             alt={project.titulo}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-(--color-accent) to-(--color-accent-hover) text-5xl font-black text-white/90">
+          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#1c1730] via-(--color-card) to-[#241a3d] font-mono text-5xl font-black text-(--color-accent) transition-transform duration-500 group-hover:scale-105">
+            {"</"}
             {project.titulo.charAt(0)}
+            {">"}
           </div>
         )}
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="text-lg font-semibold text-(--color-ink)">
+        <h3 className="text-lg font-semibold text-(--color-ink) transition-colors group-hover:text-(--color-accent-hover)">
           {project.titulo}
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-(--color-muted)">
@@ -35,14 +37,14 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.tecnologias.slice(0, 4).map((t) => (
             <span
               key={t}
-              className="rounded-full bg-(--color-surface) px-2.5 py-1 text-xs font-medium text-(--color-muted)"
+              className="rounded-full border border-(--color-border) bg-(--color-surface) px-2.5 py-1 font-mono text-xs font-medium text-(--color-muted)"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-(--color-accent)">
+        <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-(--color-accent-hover)">
           Ver proyecto
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </span>

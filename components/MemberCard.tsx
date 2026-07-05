@@ -37,15 +37,15 @@ function MailIcon() {
 
 export default function MemberCard({ member }: { member: Member }) {
   return (
-    <div className="group rounded-2xl border border-(--color-border) bg-white p-6 text-center transition-shadow hover:shadow-md">
-      <div className="mx-auto h-28 w-28 overflow-hidden rounded-full ring-4 ring-(--color-surface)">
+    <div className="card-glow group h-full rounded-2xl border border-(--color-border) bg-(--color-card) p-6 text-center">
+      <div className="mx-auto h-28 w-28 overflow-hidden rounded-full ring-4 ring-(--color-surface) transition-all duration-300 group-hover:ring-(--color-accent-soft) group-hover:shadow-[0_0_30px_-8px_var(--color-accent)]">
         {member.foto ? (
           <Image
             src={member.foto}
             alt={member.nombre}
             width={112}
             height={112}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-(--color-accent) text-2xl font-bold text-white">
@@ -64,14 +64,14 @@ export default function MemberCard({ member }: { member: Member }) {
 
       {member.aporta.length > 0 && (
         <div className="mt-4 text-left">
-          <p className="text-xs font-semibold uppercase tracking-wide text-(--color-ink)">
+          <p className="font-mono text-xs font-semibold uppercase tracking-wide text-(--color-accent-hover)">
             Aporta al equipo
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             {member.aporta.map((s) => (
               <span
                 key={s}
-                className="rounded-full bg-(--color-surface) px-3 py-1 text-xs font-medium text-(--color-muted)"
+                className="rounded-full border border-(--color-border) bg-(--color-surface) px-3 py-1 text-xs font-medium text-(--color-muted) transition-colors hover:border-(--color-accent) hover:text-(--color-ink)"
               >
                 {s}
               </span>

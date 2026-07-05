@@ -10,15 +10,15 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-(--color-border) bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-bg)/75 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="group flex items-center gap-2.5">
           <Image
             src="/logo.jpeg"
             alt="Logo de AMAUI"
             width={36}
             height={36}
-            className="h-9 w-9 rounded-full"
+            className="h-9 w-9 rounded-full ring-1 ring-(--color-border) transition-shadow group-hover:ring-(--color-accent)"
             priority
           />
           <span className="text-xl font-extrabold tracking-tight text-(--color-ink)">
@@ -31,7 +31,7 @@ export default function Navbar() {
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="transition-colors hover:text-(--color-ink)"
+                className="nav-link transition-colors hover:text-(--color-ink)"
               >
                 {l.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
 
         <Link
           href="/#contacto"
-          className="rounded-full bg-(--color-accent) px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-(--color-accent-hover)"
+          className="rounded-full bg-(--color-accent) px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-(--color-accent-hover) hover:shadow-[0_0_22px_-6px_var(--color-accent)]"
         >
           Contáctanos
         </Link>
