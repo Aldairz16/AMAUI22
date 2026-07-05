@@ -92,11 +92,33 @@ En `data/projects.ts`, cada objeto acepta:
 - `imagen` — ruta en `public/` (ej. `/proyectos/foo.png`) o `null` para mostrar
   un degradado con la inicial del proyecto.
 - `deployUrl` — link al proyecto **ya desplegado**. Si no está definido, el
-  botón "Ver proyecto desplegado" simplemente no se muestra.
+  botón "Ver proyecto desplegado" simplemente no se muestra. Puede ser una
+  URL externa o una ruta interna (ver "Demos embebidas" abajo).
 - `repoUrl` — link al repositorio (opcional).
+- `color` — color de marca del proyecto (hex, opcional). Tiñe los badges de
+  tecnología y el degradado de fondo en su card/detalle sin afectar el tema
+  del resto del sitio (así cada proyecto puede tener su propia identidad).
 
-Actualmente hay 5 proyectos cargados como slots pendientes de detalle:
-**Laboral BCP, AMAY, Perfila UTP, Come Bien y Rukiur**.
+Actualmente hay 5 proyectos cargados: **Laboral BCP, AMAY, Perfila UTP, Come
+Bien y Rukiur** (los últimos 4 son slots pendientes de detalle).
+
+### Demos embebidas (como AMAY)
+
+Cuando un proyecto es una SPA propia (Vite/CRA) sin despliegue externo, se
+puede alojar directamente dentro de este sitio en vez de depender de otro
+hosting:
+
+1. En el proyecto original, agrega un script de build con el base path donde
+   vivirá (ej. `vite build --base=/proyectos/<slug>/demo/`).
+2. Si usa React Router (`createBrowserRouter`), pásale
+   `basename: import.meta.env.BASE_URL.replace(/\/$/, "")` (sin slash final)
+   para que funcione tanto en ese subpath como en un deploy standalone en `/`.
+3. Copia el `dist/` resultante a `public/proyectos/<slug>/demo/` en este repo.
+4. Agrega en `next.config.mjs` → `rewrites()` dos reglas para esa ruta: una
+   para el path exacto y otra `:path*` — ambas apuntando a su `index.html`
+   (fallback de SPA para que las rutas internas del router también funcionen
+   al recargar). Ver el ejemplo de AMAY ya en el archivo.
+5. Pon `deployUrl: "/proyectos/<slug>/demo"` en `data/projects.ts`.
 
 ### Fotos del equipo y logo
 
