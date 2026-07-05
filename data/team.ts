@@ -5,11 +5,6 @@
 //  Para la foto: sube la imagen a  public/team/  y pon aquí la ruta,
 //  por ejemplo  foto: "/team/aldair.jpg".  Si dejas foto: null se muestra
 //  un avatar con las iniciales automáticamente.
-//
-//  Las fotos aún no están cargadas: LinkedIn sirve las imágenes de perfil
-//  con URLs firmadas por sesión, así que hay que guardarlas manualmente
-//  (clic derecho -> Guardar imagen en cada perfil) y colocarlas en
-//  public/team/.
 // ============================================================================
 
 export type Social = {
@@ -37,7 +32,7 @@ export const team: Member[] = [
     bio:
       "Estudiante de Ingeniería de Sistemas e Informática en Chimbote, Áncash, Perú, con perfil orientado a gestión de proyectos y producto. Forma parte del equipo AMAUI (Innovation Team) y del Aspire Institute (Aspire Leaders Program), participando activamente en hackathons de innovación social e IA.",
     skills: ["Project Management", "Product Management", "UX/UI", "Scrum", "SQL", "Automatización"],
-    foto: null, // -> "/team/aldair.jpg"
+    foto: "/team/aldair.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/aldairpacherrez",
     },
@@ -49,7 +44,7 @@ export const team: Member[] = [
     bio:
       "Estudiante de Ingeniería de Sistemas e Informática en Perú, actualmente en INCAD SERVICE y estudiando en la UTP. Se enfoca en desarrollo frontend y diseño de prototipos web, optimizando procesos con soluciones innovadoras.",
     skills: ["Angular", "React", "Figma / UI-UX", "PostgreSQL", "Spring", "Frontend Development"],
-    foto: null, // -> "/team/anderson.jpg"
+    foto: "/team/anderson.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/anderson-espinoza/",
     },
@@ -61,7 +56,7 @@ export const team: Member[] = [
     bio:
       "Backend Developer en Perú, actualmente en SDC DATA LATAM y estudiante en la UTP. Especializado en microservicios, cloud y arquitectura backend, y activo en la comunidad tech (Cloud Native, GitHub Campus Expert, hackathons de IA).",
     skills: ["Spring Boot / WebFlux", "AWS", "Docker", "Angular", "Microservices", "GitOps"],
-    foto: null, // -> "/team/jose.jpg"
+    foto: "/team/jose.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/jose-hurtado-rivas-8150b0231/",
       email: "hurtadorivasj123@gmail.com",

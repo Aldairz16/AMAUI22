@@ -32,19 +32,17 @@ componentes**:
 
 ### Fotos del equipo
 
-1. Guarda la imagen en `public/team/` (ej. `public/team/aldair.jpg`).
-2. En `data/team.ts` pon `foto: "/team/aldair.jpg"`.
-   Si dejas `foto: null` se muestra un avatar con las iniciales.
+Ya están cargadas en `public/team/` (`aldair.jpeg`, `anderson.jpeg`, `jose.jpeg`)
+y referenciadas en `data/team.ts`. Para reemplazar alguna, guarda la nueva
+imagen con el mismo nombre en `public/team/` (o cambia la ruta en `foto` en
+`data/team.ts`). Si pones `foto: null` se muestra un avatar con las iniciales.
 
 ### Logo del equipo (el oso 🐻)
 
-El logo actual (`public/logo.svg` y `app/icon.svg`) es un **placeholder**.
-Para usar el logo real:
-
-- **Opción rápida:** guarda el logo como `public/logo.png` y cambia
-  `"/logo.svg"` por `"/logo.png"` en `components/Navbar.tsx`.
-- O sobrescribe `public/logo.svg` con tu archivo.
-- Para el favicon (pestaña del navegador), reemplaza `app/icon.svg`.
+El logo real ya está cargado en `public/logo.jpeg` (usado en el navbar) y
+`app/icon.jpg` (favicon de la pestaña del navegador). Para reemplazarlo,
+sobrescribe esos archivos con el mismo nombre, o cambia la ruta en
+`components/Navbar.tsx`.
 
 ### Proyectos
 

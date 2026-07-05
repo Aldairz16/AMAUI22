@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/logo.svg"
+            src="/logo.jpeg"
             alt="Logo de AMAUI"
             width={36}
             height={36}
