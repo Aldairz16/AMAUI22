@@ -35,6 +35,7 @@ export const team: Member[] = [
     foto: "/team/aldair.jpeg",
     socials: {
       linkedin: "https://www.linkedin.com/in/aldairpacherrez",
+      email: "aldairalexanderpa@gmail.com",
     },
   },
   {
