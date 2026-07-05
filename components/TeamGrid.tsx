@@ -1,15 +1,17 @@
 import { team } from "@/data/team";
 import MemberCard from "./MemberCard";
+import Eyebrow from "./Eyebrow";
 
 export default function TeamGrid() {
   return (
     <section id="equipo" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-[--color-ink] sm:text-4xl">
+          <Eyebrow>Equipo</Eyebrow>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-(--color-ink) sm:text-4xl">
             El equipo
           </h2>
-          <p className="mt-4 text-lg text-[--color-muted]">
+          <p className="mt-4 text-lg text-(--color-muted)">
             Tres desarrolladores, un mismo objetivo: construir buen software.
           </p>
         </div>

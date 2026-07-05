@@ -1,7 +1,9 @@
 // ============================================================================
 //  SINERGIA DEL EQUIPO — EDITA ESTE ARCHIVO
 // ----------------------------------------------------------------------------
-//  Contenido de la sección "Nuestra forma de trabajar" (debajo del equipo).
+//  Contenido de la sección "Cómo trabajamos" (debajo del equipo).
+//  Se mantiene breve a propósito: la tabla ya comunica los roles de forma
+//  rápida de escanear, sin párrafos largos.
 // ============================================================================
 
 export type SynergyRow = {
@@ -11,31 +13,28 @@ export type SynergyRow = {
 };
 
 export const synergy = {
-  titulo: "Nuestra forma de trabajar",
-  parrafos: [
-    "Somos un equipo multidisciplinario que combina gestión, diseño, tecnología e innovación para construir soluciones digitales con impacto real. Cada integrante cumple un rol complementario dentro del proceso: Aldair lidera la visión, la organización y la estrategia del producto; Anderson convierte las ideas en experiencias visuales claras y funcionales; y José construye la base técnica que permite llevar las soluciones a una implementación real.",
-    "Esta combinación nos permite cubrir todo el ciclo de creación de un proyecto: entendemos el problema, diseñamos la experiencia, desarrollamos la solución, documentamos el avance y preparamos la propuesta para presentarla ante jurados, mentores o usuarios. Nuestra fortaleza está en trabajar de forma ordenada, rápida y colaborativa, especialmente en contextos de hackathons, incubadoras y proyectos de innovación.",
-  ],
+  titulo: "Cómo trabajamos",
+  subtitulo:
+    "Tres roles complementarios que cubren todo el ciclo: de la idea al producto terminado.",
   tabla: [
     {
       nombre: "Aldair",
-      rol: "Líder de Producto, Gestión e IA",
+      rol: "Producto, Gestión e IA",
       enfoque:
-        "Define dirección, organiza el trabajo, documenta avances y mantiene el foco del proyecto.",
+        "Define dirección, organiza el trabajo y mantiene el foco del proyecto.",
     },
     {
       nombre: "Anderson",
       rol: "Diseño UX/UI y Frontend",
       enfoque:
-        "Convierte ideas en interfaces, prototipos y experiencias visuales claras para el usuario.",
+        "Convierte ideas en interfaces y experiencias visuales claras.",
     },
     {
       nombre: "José",
-      rol: "Backend y Arquitectura Técnica",
+      rol: "Backend y Arquitectura",
       enfoque:
-        "Construye la base tecnológica, valida la viabilidad técnica y prepara soluciones escalables.",
+        "Construye la base tecnológica y valida la viabilidad técnica.",
     },
   ] as SynergyRow[],
-  cierre:
-    "Juntos cubrimos las áreas clave para crear productos digitales competitivos: estrategia, diseño, desarrollo, documentación y presentación. Esta sinergia nos permite avanzar desde una idea inicial hasta una solución clara, viable y lista para ser presentada en entornos de innovación.",
+  cierre: "Estrategia, diseño y desarrollo — en un mismo equipo.",
 };

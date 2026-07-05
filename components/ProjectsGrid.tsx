@@ -1,15 +1,17 @@
 import { projects } from "@/data/projects";
 import ProjectCard from "./ProjectCard";
+import Eyebrow from "./Eyebrow";
 
 export default function ProjectsGrid() {
   return (
     <section id="proyectos" className="py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-[--color-ink] sm:text-4xl">
+          <Eyebrow>Portafolio</Eyebrow>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-(--color-ink) sm:text-4xl">
             Proyectos
           </h2>
-          <p className="mt-4 text-lg text-[--color-muted]">
+          <p className="mt-4 text-lg text-(--color-muted)">
             Una selección de lo que hemos construido. Haz clic en cualquiera para
             ver el detalle.
           </p>

@@ -37,8 +37,8 @@ function MailIcon() {
 
 export default function MemberCard({ member }: { member: Member }) {
   return (
-    <div className="group rounded-2xl border border-[--color-border] bg-white p-6 text-center transition-shadow hover:shadow-md">
-      <div className="mx-auto h-28 w-28 overflow-hidden rounded-full ring-4 ring-[--color-surface]">
+    <div className="group rounded-2xl border border-(--color-border) bg-white p-6 text-center transition-shadow hover:shadow-md">
+      <div className="mx-auto h-28 w-28 overflow-hidden rounded-full ring-4 ring-(--color-surface)">
         {member.foto ? (
           <Image
             src={member.foto}
@@ -48,30 +48,30 @@ export default function MemberCard({ member }: { member: Member }) {
             className="h-full w-full object-cover"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-[--color-accent] text-2xl font-bold text-white">
+          <div className="flex h-full w-full items-center justify-center bg-(--color-accent) text-2xl font-bold text-white">
             {initials(member.nombre)}
           </div>
         )}
       </div>
 
-      <h3 className="mt-5 text-lg font-semibold text-[--color-ink]">
+      <h3 className="mt-5 text-lg font-semibold text-(--color-ink)">
         {member.nombre}
       </h3>
-      <p className="text-sm font-medium text-[--color-accent]">{member.rol}</p>
-      <p className="mt-3 whitespace-pre-line text-left text-sm leading-relaxed text-[--color-muted]">
+      <p className="text-sm font-medium text-(--color-accent)">{member.rol}</p>
+      <p className="mt-3 whitespace-pre-line text-left text-sm leading-relaxed text-(--color-muted)">
         {member.bio}
       </p>
 
       {member.aporta.length > 0 && (
         <div className="mt-4 text-left">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[--color-ink]">
+          <p className="text-xs font-semibold uppercase tracking-wide text-(--color-ink)">
             Aporta al equipo
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             {member.aporta.map((s) => (
               <span
                 key={s}
-                className="rounded-full bg-[--color-surface] px-3 py-1 text-xs font-medium text-[--color-muted]"
+                className="rounded-full bg-(--color-surface) px-3 py-1 text-xs font-medium text-(--color-muted)"
               >
                 {s}
               </span>
@@ -80,14 +80,14 @@ export default function MemberCard({ member }: { member: Member }) {
         </div>
       )}
 
-      <div className="mt-5 flex justify-center gap-3 text-[--color-muted]">
+      <div className="mt-5 flex justify-center gap-3 text-(--color-muted)">
         {member.socials.linkedin && (
           <a
             href={member.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`LinkedIn de ${member.nombre}`}
-            className="transition-colors hover:text-[--color-accent]"
+            className="transition-colors hover:text-(--color-accent)"
           >
             <LinkedInIcon />
           </a>
@@ -98,7 +98,7 @@ export default function MemberCard({ member }: { member: Member }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`GitHub de ${member.nombre}`}
-            className="transition-colors hover:text-[--color-accent]"
+            className="transition-colors hover:text-(--color-accent)"
           >
             <GithubIcon />
           </a>
@@ -107,7 +107,7 @@ export default function MemberCard({ member }: { member: Member }) {
           <a
             href={`mailto:${member.socials.email}`}
             aria-label={`Email de ${member.nombre}`}
-            className="transition-colors hover:text-[--color-accent]"
+            className="transition-colors hover:text-(--color-accent)"
           >
             <MailIcon />
           </a>
