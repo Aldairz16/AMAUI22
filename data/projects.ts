@@ -45,6 +45,7 @@ export const projects: Project[] = [
     tecnologias: ["React", "Vite", "TypeScript", "Tailwind CSS", "Radix UI", "Web Speech API"],
     imagen: "/projects/amay-icon.png",
     color: "#2B59FF",
+    deployUrl: "/proyectos/amay/demo",
   },
   {
     slug: "perfila-utp",
